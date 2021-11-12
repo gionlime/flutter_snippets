@@ -1,0 +1,53 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '1.1.6'
+}
+
+group 'org.example'
+version '1.3.5'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version = '2021.1.3'
+}
+patchPluginXml {
+    changeNotes = """
+       <h2>1.3.5</h2>
+      <li>Surrport Android Studio 2020.3.1</li>
+      <li>Surrport Flutter sdk 2.5.1</li>
+      <li>Remove deprecated widgets</li>
+       <h2>1.3.4</h2>
+      <li>Surrport Android Studio 4.2</li>
+      <h2>1.3.3</h2>
+      <li>Add Shortcut stf</li>
+      <li>Add Shortcut stl</li>
+      <li>Add Shortcut btn_flat  Create FlatButton Widget</li>
+      <li>Add Shortcut btn_flat_icon  Create FlatButton.icon Widget</li>
+      <li>Add Shortcut btn_raised  Create RaisedButton Widget</li>
+      <li>Add Shortcut btn_raised_icon  Create RasiedButton.icon Widget</li>
+      <li>Add Shortcut btn_outline  Create OutlineButton Widget</li>
+      <li>Add Shortcut btn_outline_icon  Create OutlineButton.icon Widget</li>
+      <li>Add Shortcut btn_text  Create TextButton Widget</li>
+      <li>Add Shortcut btn_text_icon  Create TextButton.icon Widget</li>
+      <li>Add Shortcut btn_popup  Create PopupMenuButton Widget</li>
+      <li>Add Shortcut btn_dropdown  Create DropdownButton Widget</li>
+      <li>Add Shortcut btn_icon  Create IconButton Widget</li>
+      <h2>1.3.2</h2>
+      <li>Add pagestart and page Shortcut</li>
+      <h2>1.3.1</h2>
+      <li>Add new liveTemplates,support IDEA and Android Studio</li>
+      <li>Modify Shortcut and Description</li>
+      """
+}
+test {
+    useJUnitPlatform()
+}

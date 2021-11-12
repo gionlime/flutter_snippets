@@ -1,0 +1,47 @@
+    &#10;  换行
+    &quot;  "
+    &lt;    <
+    &gt;    >
+删除build文件夹 plugin.xml 生效BUG
+    <!--    AspectRatio-->
+    <template name="aspectRatio" value="AspectRatio(&#10;aspectRatio: $aspectRatio$,&#10;child: $child$&#10;),"
+              description="New AspectRatio Widget" toReformat="true" toShortenFQNames="true">
+        <variable name="aspectRatio" expression="$aspectRatio$" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="DART_STATEMENT" value="true"/>
+        </context>
+    </template>
+
+
+
+        <!--    New Scaffold with AppBar-->
+
+        <template name="scfAppBar"
+                  value="return Scaffold(&#10;appBar: AppBar(&#10;title: Text('$appbarTitle$'),&#10;),&#10;body: $body$&#10;);"
+                  description="New Scaffold with AppBar" toReformat="true" toShortenFQNames="true">
+            <variable name="appbarTitle"1 expression="&quot;appbarTitle&quot;" defaultValue="" alwaysStopAt="true"/>
+            <variable name="body" expression="&quot;bodyWidget&quot;" defaultValue="" alwaysStopAt="true"/>
+            <context>
+                <option name="DART_STATEMENT" value="true"/>
+            </context>
+        </template>
+
+
+        return Scaffold(&#10;appBar: AppBar(&#10;title: Text('$appbarTitle$'),&#10;),&#10;body: $body$&#10;);
+             return Scaffold(
+                appBar: AppBar(
+                    title: Text('appbarTitle'),
+              ),
+                body: bodyWidget
+            );
+
+
+            &lt;tr&gt;
+                &lt;td&gt;pagestart&lt;/td&gt;
+                &lt;td&gt;Create page with MaterialApp.&lt;/td&gt;
+              &lt;/tr&gt;
+
+                      &lt;tr&gt;
+                              &lt;td&gt;page&lt;/td&gt;
+                              &lt;td&gt;Create page without MaterialApp.&lt;/td&gt;
+                            &lt;/tr&gt;
